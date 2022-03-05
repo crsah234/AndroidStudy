@@ -17,6 +17,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 <!-- layout_constraint.. blabla 이런것들 to __ to 머시기로 되어있음. bottom, top, left, right로 외우면 쉬움.-->
-
+<!-- 위에것을 설정 안할시 missing constraints 오류 발생.-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
