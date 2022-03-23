@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">A02_Layout</string>
+    <string name="mdept_name_c">클라우드 컴퓨팅</string>
+    <string name="mdept_name_q">실내건축 큐레이터</string>
+    <string name="dept_name_c">컴퓨터소프트웨어공학과</string>
+    <string name="dept_name_q">실내건축 디자인과</string>
+    <string name="tel">문의처 : 000-0000-0000</string>
+    <string name="msgmc">단기직무 과정 접수중</string>
+    <string name="msgmq">단기직무 과정 접수 마감</string>
+    <string name="title">전문기술석사과정</string>
+    <string name="msg">과정 : 2년\n인원 : 10명\n\비고 : 야간</string>
+</resources>
