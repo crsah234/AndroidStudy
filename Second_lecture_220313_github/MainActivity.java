@@ -13,7 +13,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickLogo(View view){
         //자료 정보창 띄우는 객체 toast
+        // 매개변수를 View로 받는다.
         Toast.makeText(this,"문의사항 : 000-000-000",Toast.LENGTH_LONG).show();
+        // toast인자는 어디에 띄울것인지, 무슨내용을, 얼마만큼.show()로 보면된다.
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
