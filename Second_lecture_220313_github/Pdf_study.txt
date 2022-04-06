@@ -112,43 +112,7 @@ theme.xml파일에 style을 customize하여 내가 원하는 것에 적용 간�
 android : theme 는 앱이나 액티비티 전체에 그 스타일을 적용 하는 것 같음.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Background : shape_line (drawble 폴더에 잇음)
+Android : theme = ..
+Style : @style/...
 
