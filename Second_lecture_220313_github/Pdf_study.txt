@@ -73,6 +73,55 @@ style과 theme 다시 강조
   - padding : 여백 설정
   - size : 크기 설정
 
+-----------------------------------------
+
+헷갈리는 것들 정리하기
+ Style, theme, shape_drawble 이 헷갈려요..
+
+
+ - background : view 의 배경. color/이미지/shape drawble(그릴수있는것)이 속성값.
+
+
+ㅁ Drawble 이란 ? - https://ju-hy.tistory.com/26
+  - 말 그대로 화면에 그릴 수 있는 것을 말한다.
+  - res 폴더의 drawble 폴더에는 이미지 & 그래픽을 어떻게 표현할지 xml을 통해 제작
+  - 이미지파일을 지정, 어떻게 보여줄지 : BitmapDrawble
+  - 어떤 상태일 때 이미지를 변경 : StateListDrawble
+  - 모양을 직접 그리는 : ShapeDrawble
+
+ ㅁ ShapeDrawble
+  - 캔버스를 사용할 필요 없이 간단하게 그릴 수 있는 드로어블
+  - Shape 태그를 사용(Selector 아님)
+  -  도형의 모양을 나타내기 위한 속성들 : 
+	- size : 크기
+	- stroke : 테두리
+	- solid : 도형의 채우기
+	- padding : 안쪽 여백 채우기
+	- gradient : 그라데이션
+	- corners : 테두리 모양 설정
+
+Drawble 폴더
+ 그릴 수 있는 사진이라 그림, 모양 정의하는곳.
+Shape - shape_drawble -> 어떤것을 어떻게 그릴 것인가를 속성들로 정의해놓음. background속성으로 그림.
+
+
+style은 각 위젯들에 적용되는 속성의 모음.
+theme.xml파일에 style을 customize하여 내가 원하는 것에 적용 간ㅇ
+
+
+android : theme 는 앱이나 액티비티 전체에 그 스타일을 적용 하는 것 같음.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
