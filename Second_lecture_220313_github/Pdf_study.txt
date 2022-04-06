@@ -17,6 +17,24 @@
  - style : style 설정( 부분에 대한 것을 설정시 사용).
    ** 뷰의 외형을 꾸미는 속성여러개를 묶어서 미리 정의 한것이 style.
 
+ ㅁ Drawble 이란 ? - https://ju-hy.tistory.com/26
+  - 말 그대로 화면에 그릴 수 있는 것을 말한다.
+  - res 폴더의 drawble 폴더에는 이미지 & 그래픽을 어떻게 표현할지 xml을 통해 제작
+  - 이미지파일을 지정, 어떻게 보여줄지 : BitmapDrawble
+  - 어떤 상태일 때 이미지를 변경 : StateListDrawble
+  - 모양을 직접 그리는 : ShapeDrawble
+
+ ㅁ ShapeDrawble
+  - 캔버스를 사용할 필요 없이 간단하게 그릴 수 있는 드로어블
+  - Shape 태그를 사용(Selector 아님)
+  -  도형의 모양을 나타내기 위한 속성들 : 
+	- size : 크기
+	- stroke : 테두리
+	- solid : 도형의 채우기
+	- padding : 안쪽 여백 채우기
+	- gradient : 그라데이션
+	- corners : 테두리 모양 설정
+	
 ㅁ 이벤트 처리
  - onClick : 클릭 이벤트 처리
  - clickable : 클릭가능여부, 부모클릭 이벤트 처리시 특정자식 view를 제외하고싶을때도 사용 가능
