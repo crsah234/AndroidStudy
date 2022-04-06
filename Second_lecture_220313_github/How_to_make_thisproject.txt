@@ -1,0 +1,42 @@
+1. 이미지 2개 넣고,  theme, string 파일 수정.
+  -string : name값 title, msg로 설정
+
+2. shape_line xml추가.
+ - 모양은 네모난것: rectangle - 없어도 기본적인거라 적용되긴함
+ - 테두리선 1dp, 색깔 아무거나
+ - 모서리 좌측상단, 우측하단 10dp정도 둥글게
+
+3. theme 파일 수정. - 속성은 아이템 속성으로 들어감
+ style name="APPtext" : 글씨크기 10sp, 색깔 아무거나
+ style name="APPtext.large" 글씨크기 15sp, 글씨체 bold|italic
+
+4. activity_main 설정
+ 텍스트뷰 아이디 : textViewTitle, 텍스트 셋 : title
+ 리니어 레이아웃(수평) 2개, 이미지뷰 하나(ImageViewLogo)
+ 수평 리니어에 사진 각각 하나씩, 그리고 수직 레이어 넣기
+ 수직레이어에 텍스트뷰 2개씩 넣기
+ 수평 레이어 2개 gravity 값 center_vertical 
+
+ 사진과 수직레이어 비율 1:2 로 2개다 설정하기.
+ 사진위에것 imageViewMDC, 아래것 imageViewMDQ
+ 위 레[이아웃 텍스트뷰, textViewMDC, textViewMDCd
+ 아래 레이아웃 텍스트뷰, textViewMDQ, textViewMDQd
+ 텍스트뷰다 설정하기.
+textViewMDQ 자바에서 텍스트사이즈,  컬러. 그리고 스타일 설정하기
+ 리니어 레이아웃과 텍스트뷰 사이에 padding 20dp 주기
+ 텍스트뷰 2개 영역 차지비율 2:1
+ apptext 테마 리니어레이아웃2개에 적용하고
+ 나머지 생각나는거 다 해보기.
+ 
+
+ toast 생성하기(마지막 이미지뷰클릭시 아무거나 띄우기)
+ 
+
+
+
+
+
+
+
+
+ 

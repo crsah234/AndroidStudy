@@ -1,0 +1,87 @@
+01. 기본 레이아웃과 뷰
+
+ㅁ 레이아웃과 위젯
+ - 위젯 : 텍뷰나 이미지뷰 같은 실제로 화면 구성하는것들.
+            레이아웃에서는 위젯, 자바에서는 클래스로 구분됨.
+
+ - 레이아웃
+ - 뷰 : 위젯+ 레이아웃 합친거. 화면 구성요소 전체를 아우르는 말
+ - 뷰 그룹 : 여러 뷰를 포함하고 있는 객체
+
+
+ㅁ View의 기본 속성
+ - 텍스트 사이즈 : sp 단위./
+ - background : view 의 배경. color/이미지/shape drawble(그릴수있는것)이 속성값.
+					https://ju-hy.tistory.com/26
+ - theme : 액티비티나 앱 전체에 대한 style을 설정 시 사용.
+ - style : style 설정( 부분에 대한 것을 설정시 사용).
+   ** 뷰의 외형을 꾸미는 속성여러개를 묶어서 미리 정의 한것이 style.
+
+ㅁ 이벤트 처리
+ - onClick : 클릭 이벤트 처리
+ - clickable : 클릭가능여부, 부모클릭 이벤트 처리시 특정자식 view를 제외하고싶을때도 사용 가능
+                true 설정시 공간분리된다는 느낌이라고 보면될듯.
+
+ㅁ View 기본 메소드
+ - int getId() : R.java에 저장되어있는 뷰의 id 값을 반환 ** int 값임
+
+ㅁ 기본 레이아웃
+ 
+ ㅇ LinearLayout : 일렬로 배치하는 화면구성, horizontal, vertical
+  - 속성 
+    1. 자식뷰가 차지하는 '영역 비율' 설정 관련 속성
+  - layout_weight : 자식뷰의 속성으로 설정, 부모의 orientation값에 따라  height나 width를 0dp로 설정후자식들의 layout_weight 설정시(ex : 1:2:3처럼) 완전 분할 가능.
+  - layout_margin : 바깥여백설정, 자식뷰의 속성으로설정(자식거에다가 작성함.)
+  - padding : 안쪽여백 설정, 부모뷰, 리니어 레이아웃에 설정.
+  - gravity : 부모뷰에쓰는것, 전체내용 정렬을 어떻게 할것이냐
+	 (top, bottom. left, right, center_vertical, center_horizontal, center) c_v|c_h=center
+  - layout_gravity : 자식뷰에 쓰는것. 속성값은 같고 그 개체를 어떻게 정렬할것인가이다.
+		https://mainia.tistory.com/2311
+
+
+style과 theme 다시 강조
+ style : layout파일에서 개별 view에 적용
+ theme : manifest파일에서 애플리케이션이나 activity에 적용하거나, layout에 적용.
+
+
+ ㅁ shape drawble - 해당위젯의 background속성으로 설정. setBackgroundResource
+  색과 그라데이션을 포함하는 모양을 설정할 때 사용, res/drawble 폴더 밑에 xml로 저장
+ - shape : 모양 설정, root엘리먼트
+ - corners : 둥근사각형 bottomLeftRadius / bottomRightRadius / topLeftRadius/ topRightRadius
+ - gradient : 점진적 색상표현
+ ㅇ 속성값
+  - solid : 채우기
+  - stroke : 테두리 선 설정
+  - padding : 여백 설정
+  - size : 크기 설정
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
