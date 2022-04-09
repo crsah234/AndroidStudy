@@ -1,3 +1,6 @@
+MainActivity 는 툴바랑 플로팅 바 설정만 가능. 액자가 mainactivity이고 메인 사진이 firstfragment라고 생각하면됩니다.
+
+
 1. ThirdFragment 제작.
 2. Fragment.first.xml, second, third  , 등 실습자료 붙여넣기.
 3. nav_graph - assign start destination.확인
