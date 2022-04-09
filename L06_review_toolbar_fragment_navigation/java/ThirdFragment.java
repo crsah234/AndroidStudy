@@ -82,6 +82,7 @@ public class ThirdFragment extends Fragment {
             public void onClick(View v) {
                 // fragment아이디(네비게이션 그래프에 정의된 아이디)도 넣어줌줌
                 NavHostFragment.findNavController(ThirdFragment.this).popBackStack(R.id.FirstFragment,false);
+                // 2번째 매개변수의 false는 첫번째 매개변수로 지정한 fragment는 백스택에 남겨두라는 의미입니다.
             }
         });
 
