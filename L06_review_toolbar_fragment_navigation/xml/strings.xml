@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">A06_toolbar_navigation_220408</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="app_title">증명서 발급</string>
+    <string name="sno">학번</string>
+    <string name="pwd">비밀번호</string>
+
+    <string name="sn_hint">학번 입력</string>
+    <string name="pwd_hint">비밀번호 입력</string>
+    <string name="login">로그인</string>
+    <string name="find_pwd">비밀번호찾기</string>
+
+    <string name="cert1">재학 증명서</string>
+    <string name="cert2">등록금납입 증명서</string>
+    <string name="cert3">졸업 증명서</string>
+    <string name="result">발급이 완료되었습니다. 학교 email을 확인해 주세요.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
