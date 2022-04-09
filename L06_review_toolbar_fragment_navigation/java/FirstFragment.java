@@ -46,6 +46,7 @@ public class FirstFragment extends Fragment {
                 //1. navcontroller 객체얻어오기
                 NavController navController = NavHostFragment.findNavController(FirstFragment.this);
                 // 학번등을 가져오는것을 생성 - 텍스트가져와서 string 타입, 공백 삭제
+                // binding.객체를 이용하여 값을 가져옴
                 String sno = binding.editTextSNo.getText().toString().trim();
                 String spwd = binding.editTextPassword.getText().toString().trim();
 
