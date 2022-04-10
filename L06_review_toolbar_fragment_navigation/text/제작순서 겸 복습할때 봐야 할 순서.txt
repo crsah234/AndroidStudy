@@ -1,5 +1,7 @@
 MainActivity 는 툴바랑 플로팅 바 설정만 가능. 액자가 mainactivity이고 메인 사진이 firstfragment라고 생각하면됩니다.
-
+- 구조 : content_main와 nav_graph를 보면 알겠지만 activity는 하나인데 fragment들을 왔다갔다하며 여러개의 화면처럼 보이는 것.
+       현재의 content_main은 nav_graph에서 first_fragment(fragment_first가 xml이름인데 편의상 바꿔서 씀)로 설정 되있음. 
+       또한 이동방향이 1->2->3 으로 되어있으니 콘텐트 메인이 첫, 둘, 셋 째의 fragment를 =왔다갔다 하는 것일듯함.
 
 1. ThirdFragment 제작.
 2. Fragment.first.xml, second, third  , 등 실습자료 붙여넣기.
@@ -19,7 +21,8 @@ MainActivity 는 툴바랑 플로팅 바 설정만 가능. 액자가 mainactivit
 	     그리고 ok 버튼 눌렀을때 전화다이얼로 넘어가기.
 	    - 이 것은 원래 구현되어있는것이기에? 내용만 구현하기
 	2) public boolean onOptionsItemSelected(MenuItem item)
-		- 옵션메뉴중 하나는 지도보여주기, 하나는 홈페이지로 이동하기.
+		- 옵션메뉴중 하나는 지도보여주기, 
+		- 하나는 홈페이지로 이동하기.
 		- 좌표 : geo:37.50014293285583, 126.86787227062011
 
 6.FirstFragment.java
