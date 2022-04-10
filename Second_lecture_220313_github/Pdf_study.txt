@@ -50,11 +50,15 @@
     1. 자식뷰가 차지하는 '영역 비율' 설정 관련 속성
   - layout_weight : 자식뷰의 속성으로 설정, 부모의 orientation값에 따라  height나 width를 0dp로 설정후자식들의 layout_weight 설정시(ex : 1:2:3처럼) 완전 분할 가능.
   - layout_margin : 바깥여백설정, 자식뷰의 속성으로설정(자식거에다가 작성함.)
+    - layout_gravity : 자식뷰에 쓰는것. 속성값은 같고 그 개체를 어떻게 정렬할것인가이다.
+    (top, bottom. left, right, center_vertical, center_horizontal, center) c_v|c_h=center
+    2. 부모뷰에 쓰는 것
   - padding : 안쪽여백 설정, 부모뷰, 리니어 레이아웃에 설정.
   - gravity : 부모뷰에쓰는것, 전체내용 정렬을 어떻게 할것이냐
 	 (top, bottom. left, right, center_vertical, center_horizontal, center) c_v|c_h=center
-  - layout_gravity : 자식뷰에 쓰는것. 속성값은 같고 그 개체를 어떻게 정렬할것인가이다.
-		https://mainia.tistory.com/2311
+	 
+	 https://mainia.tistory.com/2311
+
 
 
 style과 theme 다시 강조
