@@ -4,11 +4,14 @@ MainActivity 는 툴바랑 플로팅 바 설정만 가능. 액자가 mainactivit
        또한 이동방향이 1->2->3 으로 되어있으니 콘텐트 메인이 첫, 둘, 셋 째의 fragment를 =왔다갔다 하는 것일듯함.
 
 1. ThirdFragment 제작.
-2. Fragment.first.xml, second, third  , 등 실습자료 붙여넣기.
-3. nav_graph - assign start destination.확인
+
+2. Fragment.first.xml, second, third  , 이미지 등 실습자료 붙여넣기.
+
+3. nav_graph - assign start destination.확인(집모양의 아이콘을 통해 설정 가능)
 	- 시작점으로 설정된 것이 content_main의 화면이 됨.
 	- activity_main의 <include layout="@layout/content_main" />
-	  또한 이걸로 인해 메인 화면이 됨. 여기서 fragment들을 왔다갔다 하는 것임.	
+	  또한 이걸로 인해 메인 화면이 됨. 여기서 fragment들을 왔다갔다 하는 것임. 아마도?
+	  
 4. menu_main.xml
 	1) Item 하나추가, 옵션메뉴 에서 누를시 바로 지도 보여줄수 있도록 용도.
 	   - title : 위치정보
@@ -29,19 +32,21 @@ MainActivity 는 툴바랑 플로팅 바 설정만 가능. 액자가 mainactivit
 	1) 로그인 버튼 눌를시  buttonLogin 학번과 비번값을 가져와서 second에 넘김
 			단 빈값일 경우 토스트만 띄우기.
 		- 나브컨트롤러 객체 얻어와서 
-		 -> 객체 생성, 나브호스트 프래그먼트에서 나브컨트롤러를 찾는데, 현위치에서찾음
+		  -> 객체 생성, 나브호스트 프래그먼트에서 나브컨트롤러를 찾는데, 현위치에서찾음
 		  -> 이 컨트롤러 객체를 이용해 나중에 화면이동시 값 넘길때 사용.
 		- editText의 적힌 학번과 비번을 binding을 써서 가져오기.
 		- 빈값이 아닌 경우 그냥 리턴시키기.
 		- 로그인 성공 시 학번과 비번을 secondFragment로 값 넘기기.
 			- 넘길때는 번들이용.
 		
-navController객체 생성할때 -> 
+- navController객체 생성, 다음 프래그먼트로 값 넘길떄 -> 
 navController 객체명 = navHostFragment.findNavController(프래그먼트위치.this)
 
-다음프래그먼트로 값 넘길때
- 객체명.navigate(R.id.nav_graph의 화면옮길때의 아이디값, 번들)
+ 다음프래그먼트로 값 넘길때
+ 객체명.navigate(R.id.action-frist_to_second ~~, Bundle객체명)
+ 
 
+- 객체 생성없이 바로 넘길때.
 아니면 그냥 navHostFragment.findNavController(Fragment.this)
 .navigate(~~~) 해도됨
 
