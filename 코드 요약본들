@@ -1,0 +1,120 @@
+1. 이벤트 처리기(onClickListener) 관련 3가지 방법.
+  1.1 이름이있는 클래스 방법 : 클래스 생성 / 이벤트 처리기 객체 생성 / 이벤트 처리기 등록
+  
+    1) 클래스 생성
+      
+      class OnClickListenerDept1 implements View.OnClickListener{
+      
+        // 이벤트 처리기는 View.OnClickListener를 상속받으므로 재정의가 필요함
+        // 재정의 필요함, 알트 엔터로 밑의것자동입력하기
+        
+        @Override
+        public void onClick(View view) {
+        // 클라우딩컴퓨터 텍스트뷰 클릭시 토스트 띄우기
+            Toast.makeText(getApplicationContext(),R.string.mdept_name_c,Toast.LENGTH_SHORT).show();
+        }
+    }
+    
+     2) 이벤트 처리기 객체 생성
+   
+        OnClickListenerDept1 oclDept1= new OnClickListenerDept1();
+        
+     3) 원하는 View에 이벤트 처리기 등록
+     
+        textViewDept1.setOnClickListener(oclDept1);
+        
+        
+  1.2 이름이없는 클래스 방법(익명 첫번째) : 클래스 생성 & 이벤트 처리기객체 생성 동시 / 이벤트 처리기 등록
+     
+     - View.OnClickListener 객체 생성 = new View.OnClickListenr
+     
+    1) 클래스 생성 & 이벤트 처리기 객체 생성
+        View.OnClickListener oclDept2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+          Toast.makeText(getApplicationContext(),R.string.dept_name_q,Toast.LENGTH_SHORT).show();
+            }
+        };
+        
+     2) 생성된 처리기 객체를 등록해주기
+       
+       textViewDept2.setOnClickListener(oclDept2);
+       
+       
+   1.3 이름이 없는 클래스 방법(익명 두번째) : 클래스 생성 & 이벤트 처리기 객체 생성 & 처리기 등록
+      -  매개변수에 new V만쳐도 자동으로 입력가능함.
+   
+       textViewDept2.setOnClickListener(new View.OnClickListener() {
+            //여기가 클래스가 정의가 되는 곳 과    new로 객체가 생성이 되는 것과
+            // textViewDept2.setOnClickListener 로 객체가 등록되는 것, 3가지가 동시에 일어남
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"실내건축 디자인과",Toast.LENGTH_SHORT).show();
+            }
+        });
+        
+        
+    
+2. Toast띄우기
+    Toast.makeText(this, "text", HOw long).show();
+    Toast.makeText(getApplicationContext(),"실내건축 디자인과",Toast.LENGTH_SHORT).show();
+    
+3. AlertDialog 띄우기. 터치이벤트 발생시 띄우려면 이벤트 처리기 안에 생성되어있어야함. 코드 L03_review에 나와있음.
+    
+    1) AlertDialog.Builder 객체 생성
+    
+    AlertDialog.Builder adBuilder = new AlertDialog.Builder(MainActivity.this);
+                                            // Activity내용이 들어가야함
+    
+    2) 타이틀 설정
+    
+       adBuilder.setTitle("공지사항");
+       
+    3) 메시지 설정
+    
+       adBuilder.setMessage(msg);
+    
+    4) 긍정 부정 중립 버튼 중 긍정 버튼 클릭시 이벤트 처리
+    
+     adBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                 버튼이름 / 다이얼로그 인터페이스.onCLickListener()
+                                  
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // ok버튼 누르면 다이얼로그 창 닫기. - dismiss
+                        dialogInterface.dismiss();
+                    }
+                });
+                adBuilder.show(); // 생성되면서 나타나게 됨.
+            }
+        });
+    
+    
+4. 이벤트 처리기 등록 후 그 이벤트 처리기를 여러개의 뷰의 처리기로써 사용하기
+
+   1) 익명 첫번째 방법
+   
+     View.OnClickListener oclImageListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, R.string.tel, Snackbar.LENGTH_LONG).
+                        setAction("Ok", new View.OnClickListener() {
+                             // Ok 누르면 또 클릭이벤트 생성                 // 또한 스낵바 설정시 익명 두번째 방법 - new View.OnClickListener()
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(getApplicationContext(), "Ok", Toast.LENGTH_SHORT).show();
+                        // toast show
+                    }
+                }).show(); // Snackbar setAction을 보여줘야하는 show();
+            }
+        };
+        // 처리기 등록하기
+        imageViewDept1.setOnClickListener(oclImageListener);
+        imageViewDept2.setOnClickListener(oclImageListener);
+    }
+}
+
+
+
+    
+    
