@@ -1,0 +1,87 @@
+
+: 이벤트처리기 3가지방법 - 
+
+1. 이름있는 클래스 생성 / 이벤트 처리기객세 생성 / 처리기 등록
+2. 이름없는 클래스 생성 & 객체 생성 / 처리기 등록
+3. 이름없는 클래스 생성 & 객체 생성 & 처리기 등록
+
+: AlertDialog만들기.
+
+
+
+
+ㅁ 이름있는 클래스 생성, 이벤트 처리기 객체 생성, 원하는 위짓에 이벤트 처리기 등록
+
+	1. 클래스 생성
+class OnClickListenerDept1 implements View.OnClickListener{
+        //1. 이벤트 처리기 생성. 이름있는 클래스 생성 하는 첫번째 방법
+        // 이벤트 처리기는 View.OnClickListener를 상속받으므로 재정의가 필요함
+        // 추상메소드 물려받은거라 재정의 필요함, 알트 엔터로 밑의것자동입력하기
+        @Override
+        public void onClick(View view) {
+        // 클라우딩컴퓨터 텍스트뷰 클릭시 토스트 띄우기
+            Toast.makeText(getApplicationContext(),R.string.mdept_name_c,Toast.LENGTH_SHORT).show();
+        }
+    }
+
+	2. 이벤트처리기 객체 생성
+ OnClickListenerDept1 oclDept1= new OnClickListenerDept1();
+
+	3. 이벤트 처리기 등록
+        textViewDept1.setOnClickListener(oclDept1);
+
+ ㅁ 이름없는 클래스, 즉 익명클래스 중 첫번째 방법 - 클래스정의& 동시에 객체 생성, 처리기 등록
+ 
+	1. 클래스 정의 & 객체 생성.
+View.OnClickListener oclDept2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+          Toast.makeText(getApplicationContext(),R.string.dept_name_q,Toast.LENGTH_SHORT).show();
+            }
+        };
+
+// 생성된 처리기 객체를 등록해주기
+        textViewDept2.setOnClickListener(oclDept2);
+
+ 
+ ㅁ 이름없는 클래스 두번째(익명 두번째) - 클래스정의&동시에 객체생성&이벤트처리 등록 동시
+
+textViewDept2.setOnClickListener(new View.OnClickListener() {
+            //여기가 클래스가 정의가 되는 곳 과    new로 객체가 생성이 되는 것과
+            // textViewDept2.setOnClickListener 로 객체가 등록되는 것, 3가지가 동시에 일어남
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"실내건축 디자인과",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+
+: AlertDialog만들기
+
+textViewTitle.setOnClickListener(new View.OnClickListener() {
+ @Override
+            public void onClick(View view) {
+            String msg = getString(R.string.msg);
+                AlertDialog.Builder adBuilder = new AlertDialog.Builder(MainActivity.this);
+                                            // Activity내용이 들어가야함
+                // 타이틀 설정
+                adBuilder.setTitle("공지사항");
+                // 메시지 설정
+                adBuilder.setMessage(msg);
+
+                // 다이얼로그에는 긍정 부정 중립 버튼이 3개있음 그중 긍정 버튼 .
+                // 익명 두번째 방법 사용. - new DialogInterface.OnclickListener
+                adBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // ok버튼 누르면 다이얼로그 창 닫기.
+                        dialogInterface.dismiss();
+                    }
+                });
+                adBuilder.show(); // 생성되면서 나타나게 됨.
+            }
+        });

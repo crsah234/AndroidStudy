@@ -1,0 +1,40 @@
+제작 과정
+1. 배경화면을 눌렀을때 토스트화면 띄우기
+ 단 자식 뷰를 제외한 부모 뷰만 클릭시 기능하기.
+ onClickInfo
+ - 자식뷰에 clickable이 트루가 되어있는지?
+
+2. 한개의 온클릭메소드를 통해 각각 다른 토스트를 띄우는데, 그 텍스트뷰의 텍스트값을가져와서 띄워라
+ onClickDeptInfo
+ textViewMDQ - msgmq
+ textViewMDC - magmc 를 띄워라
+
+-- 이벤트 처리기 생성후 넘겨서 처리해보기-- > 모두 onCreate에서하는듯
+3. 클릭을 하게되면, 이미지나 텍스트뷰 클릭시 
+ Alertdialog, snackbar, 토스트 띄우기.
+	1) 이름있는 클래스 생성, 
+		객체 생성, 이벤트 처리기 등록해보기
+		- 클래스이름 :  OnClickListenerDept1
+		- 토스트로 클라우딩 컴퓨터 띄우기
+		- 객체 생성하여 textViewDept1에 등록하기.
+
+	2) 익명클래스로 객체 생성, 처리기를 등록처리 - 익명 첫번째 방법
+		View.OnClickListener oclDept2
+		- textViewDept2에 등록하기.
+		- 이벤트는 R.string.dept_name_q를 토스트 띄우기.
+		- 토스트로 실내건축 디자인과 띄우기.
+
+	3) 익명클래스로 객체생성과 등록을 동시에. - 두번째 방법
+ 		textViewDept2.setOnClickListener
+
+	4) 익명클래스 두번째 방법으로 다이얼로그 생성하기
+		textViewTitle.setOnClickListener 안에 다이얼로그 생성하기
+		- msg
+		- 타이틀, 메시지 설정
+		- 긍정버튼 ok누르면 해산, 즉 끄기.
+		-  AlertDialog도 show()필요함
+
+4. 이미지뷰 클릭시 스낵바 나오게 하기.
+ 방법은 익명 첫번째 방법. 익명 클래스 로 객체 생성광 등록 동시에, 처리기 등록
+   하나의 객체 정의하여 두개의 이미지뷰가 공유하게끔 - 스낵바 클릯 ㅣ토스트 띄우기.
+	View.OnClickListener oclImageListener
