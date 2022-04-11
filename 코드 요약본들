@@ -116,5 +116,7 @@
 
 
 
-    
+5. 자바에서 텍스트 스타일 설정하기
+
+     textView.setTypeface(textView.getTypeface(), Typeface.BOLD_ITALIC);
     
