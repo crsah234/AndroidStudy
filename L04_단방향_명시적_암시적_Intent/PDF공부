@@ -1,0 +1,51 @@
+ㅁ Intent 유형 - 암시적인텐트, 명시적 인텐트
+ ㅇ 암시적 intent : 목적지 activity가 명확치않으나, 어떤 기능을 해야할지는 안다.
+ ㅇ 명시적 intent : 목적지 activity가 명확함.
+ 
+
+ㅁ 암시적 intent
+  Intent intent = new Intent(ACTION_DIAL,"tel:01067114740") -> 전화걸기 앱 실행
+  Intent intent = new Intent(ACTION_VIEW,"geo:~~~~~") -> 지도 앱 실행
+ 
+ㅁ 명시적 intent
+ - Intent 안에 this와 목적지.class 가 들어가야함 *******
+  Intent intent = new Intent(this, SecondActivity.class)
+  
+  
+  
+ㅁ Intent 할때 메소드
+ - void startActivity(Intent intent) : 다른 Activity tlwkr
+ - Intent getIntent() : A->B 로 StartActivity로 인텐트 넘겼을때 B에서 인텐트를 받을 때 사용
+ - void finish() : 현 액티비티 종료
+ 
+ㅁ 인텐트 할때
+  ㅇ 값 보낼때 
+    putExtra("key",value)
+       - value는 string, int, float 등등 다양함
+       
+  ㅇ 값 받을때
+    getXXXExtra("key")
+       - xxx는 받을 데이터의 '타입'
+       
+       ex ) putExtra('a','a') -> getStringExtra('a')
+       ex ) putExtra('b',1) -> getIntExtra('b')
+       
+       
+ 실제로 사용시
+  A activity
+    Intent intent = new Intent(this, BActivity.class)
+    intent.putEtra('a','b')
+    startActivity(intent);
+    
+    
+  B activity
+   Intent it = getIntent();
+   String a = it.getStringExtra('a');
+  
+     
+ 만약 어떤 버튼을 눌러 B->A 로 다시 돌아가고싶다
+  onClick에 finish() 구현하기.
+  
+  
+ 
+ 
