@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CertActivity">
+
+    <TextView
+        android:id="@+id/textViewCertTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/app_name"
+        style="@style/AppText.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="289dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCertTitle"
+        app:layout_constraintVertical_bias="0.169">
+
+        <TextView
+            android:id="@+id/textViewCert1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/cert1"
+            style="@style/AppText"
+            android:text="@string/cert1" />
+        <!--재학증명서-->
+        <TextView
+            android:id="@+id/textViewCert2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/cert2"
+            android:drawableLeft="@drawable/cert2"
+            style="@style/AppText"
+            android:layout_marginVertical="10dp"/>
+
+        <!--        android:drawableLeft="@drawable/cert2" 로 인해 텍스트뷰안에 이미지뷰가 같이보임-->
+        <!--        drawbletop. bottom 등등 위치는 변경가능함-->
+
+        <!-- 등록금납입 증명서-->
+        <TextView
+            android:id="@+id/textViewCert3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            style="@style/AppText"
+            android:drawableLeft="@drawable/cert3"
+            android:text="@string/cert3" />
+    </LinearLayout>
+    <!--    졸업증명서-->
+
+    <Button
+        android:id="@+id/buttonCertToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메인화면으로"
+        android:onClick="onClickToMain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    <!--클릭이벤트 처리하기위해 온클릭속성-->
+    <TextView
+        android:id="@+id/textViewSNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인 : "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
+    <!--     로그인정보를 넘겨주는 텍스트뷰?-->
+</androidx.constraintlayout.widget.ConstraintLayout>
