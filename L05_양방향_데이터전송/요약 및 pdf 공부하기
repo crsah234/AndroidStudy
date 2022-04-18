@@ -1,0 +1,42 @@
+ActivityResult API
+
+
+ActivityresultContract : 액티비티 이동시 인풋값, 아웃풋값의 형태를 정해주는 객체
+ActivityresultCallback : 결과를 실행하기 위한 메소드
+ActivityResultLauncher : 응답을 받기 위한 액티비티 이동을 주관하는 객체
+
+
+ActivityResultContracts :
+  1. startActivityForResult : Input을 Intent, Output 을 ActivityResult로 받음.
+  2. getContent : String , output : Uri객체
+
+
+구현과정
+
+1. ActivityResultcontract<I,O> 객체 생성
+
+ActivityResultContract<Intent, ActivityResult> contract = new ActivityResultContract.startActivityForResult();
+
+2. ActivityResultCallback<O> 객체 생성
+
+ActivityResultCallback<ActivityResult> callback = new ActivityResultCallback<ActivityResult>(){
+
+@Override
+        public void onActivityResult(ActivityResult result) {
+
+        }
+
+}
+
+3. AcitivityResultLauncher<I> 객체 생성 - registerForAcitivityResult(contract, callback) 메소드 사용
+
+ActivityResultLaucher<Intent> resultLauncher = registerForActivityResult(contract, callback)
+
+
+4. 액티비티 이동 - launch메소드 이용 - ResultLauch.lauch(Intent)
+
+
+
+
+
+
