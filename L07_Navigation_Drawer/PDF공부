@@ -1,0 +1,35 @@
+ㅁ navigation
+ - 탐색 : 화면에서 화면으로 이동하는 것.
+ - 앱 내의 여러 콘텐츠에 들어갔다 나올 수 있게 하는 것
+  - navigation component : 화면간의 이동을 도와주는 구성 요소
+
+ㅁ Navigation Drawer 
+  - 드래그시 나오는 화면 같은것. 탐색을 위한 메뉴 화면 제공.
+  - AppBarConfiguration객체 & Navigation_UI 객체를 이용하여 탐색메뉴 동작관리
+  
+  
+ㅁ Navigation Graph 생성 관련
+ - id : Nav Host 설정시 사용
+ - startDestination : 시작 화면
+ - name : fragment class
+ - label : 화면 이동시 앱바 상단에 나오는 타이틀
+ - tools : 실영향은 없고, 그저 디자인속성임
+ 
+ ㅁ DrawerLayout & NavigationView로 전체 레이아웃 구성
+  - fitsSystemWindows : true일시 상태바와 소프트키보드사이에 NavigationView가 보이도록 함
+  - openDrawer : start면 왼쪽. NavigationUI는 start만지원하는것으로알음
+ 
+ ㅁ Navigation 메뉴 설정
+  - checkableBehavior : single 일시, 선택시 각각 한번에 하나만 가능
+  - group : 전체 다 적용하는 것,
+ 
+ ㅁ Navigation UI 클래스
+  - 사용자가 앱을 탐색시 toolbar, navigation menu, navigationView등이 연동되어 실행할수있도록 지원
+  - AppBarConfiguration 객체를 이용해 앱바의 왼쪽상단모서리에있는 탐색버튼 동작을 관리
+  - Navigation View 와 Navigtaion Controller를 연결
+  
+ ㅁ AppbarConfiguration 클래스
+  - 왼쪽 상단 앱바에 삼선줄이냐 <-화살표나 등 버튼의 동작관리
+  - 삼선줄은 최상위 탐색페이지라고함,
+  - 화살표면 이전페이지로 이동함,
+  
