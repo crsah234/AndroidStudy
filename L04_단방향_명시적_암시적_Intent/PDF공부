@@ -10,7 +10,10 @@
    ㅇ 구성요소 이름(component) : 전환대상,목적지
    ㅇ 작업(action) : 이동한 목적지에서 수행할 작업
    ㅇ 카테고리(category) : 목적지를 결정하는데 필요한 추가정보
-   ㅇ 
+   ㅇ 데이터(data) : 이동시 작업에 필요한 데이터, 데이터 구조
+   ㅇ 엑스트라(extra) : 추가데이터
+   ㅇ 플래그(flag) : 인텐트 생성 방법 및 처리에 관한 정보 명시
+   
 
 ㅁ Intent 유형 - 암시적인텐트, 명시적 인텐트
  ㅇ 암시적 intent : 목적지 activity가 명확치않으나, 어떤 기능을 해야할지는 안다.
@@ -18,6 +21,8 @@
  
 
 ㅁ 암시적 intent
+  - action, data를 암시적으로 넣는다.
+
   Intent intent = new Intent(ACTION_DIAL,"tel:01067114740") -> 전화걸기 앱 실행
   Intent intent = new Intent(ACTION_VIEW,"geo:~~~~~") -> 지도 앱 실행
  
