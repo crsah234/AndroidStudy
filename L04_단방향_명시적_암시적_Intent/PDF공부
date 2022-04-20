@@ -22,18 +22,35 @@
 
 ㅁ 암시적 intent
   - action, data를 암시적으로 넣는다.
-
+  Intent it = new Intent(ACTION, data)
   Intent intent = new Intent(ACTION_DIAL,"tel:01067114740") -> 전화걸기 앱 실행
   Intent intent = new Intent(ACTION_VIEW,"geo:~~~~~") -> 지도 앱 실행
+ 
  
 ㅁ 명시적 intent
  - Intent 안에 this와 목적지.class 가 들어가야함 *******
   Intent intent = new Intent(this, SecondActivity.class)
   
   
+ㅁ 암시적 인텐트의 수신 : 매니페스트 파일의 Intent-filter에 선언되어잇음
+
+ㅁ EditText관련
+ - View, TextView 상속
+   - number : 숫자 형식
+   - phone : 전화번호 형식
+   - textEmailAdress 
+   - hint
+   - ems : 글자수 너비 고정
+ 
+ - 메소드
+   - getText()
+   - setText()
+   - append() : 맨뒤에 추가
+   - setSelection(int index) or (int start, int stop) : 내용의 일부를 선택
+   
   
 ㅁ Intent 할때 메소드
- - void startActivity(Intent intent) : 다른 Activity tlwkr
+ - void startActivity(Intent intent) : 다른 Activity 시작
  - Intent getIntent() : A->B 로 StartActivity로 인텐트 넘겼을때 B에서 인텐트를 받을 때 사용
  - void finish() : 현 액티비티 종료
  
@@ -58,7 +75,7 @@
     
     
   B activity
-   Intent it = getIntent();
+   Intent it = getIntent(); // 넘어온 Intent를 받는 객체.
    String a = it.getStringExtra('a');
   
      
