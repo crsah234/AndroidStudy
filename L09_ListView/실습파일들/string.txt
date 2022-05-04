@@ -1,0 +1,48 @@
+        <item>list1</item>
+        <item>list2</item>
+        <item>list3</item>
+        <item>list4</item>
+        <item>list5</item>
+        <item>list6</item>
+        <item>list7</item>
+        <item>list8</item>
+        <item>list9</item>
+        <item>list10</item>
+        <item>list11</item>
+        <item>list12</item>
+        <item>list13</item>
+        <item>list14</item>
+        <item>list15</item>
+        <item>list16</item>
+        <item>list17</item>
+        <item>list18</item>
+        <item>list19</item>
+        <item>list20</item>
+
+   <string name="app_name">일정 관리</string>
+    <string name="btn_add">추가</string>
+    <string name="btn_edit">수정</string>
+    <string name="btn_del">삭제</string>
+    <string name="btn_info">보기</string>
+    <string name="btn_search">검색</string>
+    <string name="btn_save">저장</string>
+    <string name="btn_cancel">취소</string>
+    <string name="sname">제목</string>
+    <string name="swhen">언제</string>
+    <string name="swhere">어디서</string>
+    <string name="sdetail">상세내용</string>
+    <string name="sname_hint">제목 입력</string>
+    <string name="swhen_hint">날짜 입력</string>
+    <string name="swhere_hint">장소 입력</string>
+    <string name="sdetail_hint">내용 짧게 입력</string>
+
+buildFeatures{
+        viewBinding true
+    }
+
+viewBinding {
+	enabled = true
+}
+
+android.R.layout.simple_list_item_single_choice
+android.R.layout.simple_list_item_activated_2
