@@ -1,0 +1,43 @@
+A09E_LIstView1
+
+1.
+string실스븨 뷰바인딩 두개 
+buildFeatures{
+        viewBinding true
+    }
+이것 그래들스크립트의 빌드.그래들.모듈에
+빌드타입 밑에 안에 넣기
+
+
+2. strings.xml 수정.
+3. 레이아웃 이동
+ - 리니어레이아웃으로 변경
+ - 수직으로 오리엔테이션속성넣기 vertical
+ - 레가시, 리스트뷰 , 넣기, 3개
+
+4. 3개의 리스트뷰 1:1:1로 크기비율 맞추기.
+ - 아이디넣기
+ - string-array 적용하기  android:entries="@array/ListData1"
+ - android:fastScrollEnabled="true" 빠르게 스크롤가능하게
+ - fastScrollAlwaysVisible= 항상보이게
+
+ - 리스트뷰2는 구분선역할로만들것임
+ - divider사용.
+ -  android:divider="?colorPrimary"
+ - --?colorPrimary 테마에 있는걸 사용시 ?사용-->
+ - 구분선두꼐 2dp
+ -  android:choiceMode="singleChoice"
+ - 
+
+ - listview3:
+ - android:choiceMode="multipleChoice"
+
+
+5. 자바 이동.
+중간에 
+실습 스트링에서
+android.R.layout.simple_list_item_single_choice 사용
+android.R.layout.simple_list_item_activated_2
+
+<item name="colorSecondary">#E5EF60</item>
+가 클릭시 나오는 색임 조정가능
