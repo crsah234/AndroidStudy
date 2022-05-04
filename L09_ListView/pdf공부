@@ -1,0 +1,38 @@
+ㅁ AdapterView
+ - 화면이 작은 모바일 장비에서 많은 데이터를 효율적으로 다루기위한것
+ - View에 직접 데이터를 저장하지않고 데이터베이스에 저장, Adapter라는 중간자를 통해 view에 가져다가 사용함
+ - ViewGroup에서 상속받아 정의된 클래스임
+
+ㅁ Adapter
+ - 출력될 데이터를 관리(추가,수정,삭제)
+ - adapterview가 출력할 수 있는 형태로 데이터를 제공하는 중간 객체
+ - 저장된 데이터를 view에서 어떻게 보여줄 지를 결정해줌.
+  ㅇ 종류
+  1. arrayAdaptor : 가장 기본적인것, 한항목당 1개씩 보여줌
+  2. SimpleAdapter : 여러개  보여줄때 사용 
+      hashpmap 형태로 key-value임.
+  
+
+ㅁ adapter 메소드
+ ㅇ int  getCount()
+ ㅇ Object getItem(int position)
+ ㅇ long getItemId(int position)
+ ㅇ View getView(int position, View convertView, ViewGroup parent) - converView는 재활용, Viewgroup parent 는 어답터 뷰
+ ㅇ void notifyDataSetChanged() : 데이터가 변경 후 호출해야 변경된것이 적용됨
+ ㅇ ArrayAdapter
+   1. void setNotifyOnChange(boolean notifyOnChange)
+   2. void add(T object) : 맨뒤에 추가
+   3. void insert(T object, int index) : index에 데이터 추가
+   4. void clear()
+   5. void remove(T object) : 개별 삭제
+
+
+ㅁ ListView
+ - 정의된 데이터 목록을 '아이템 단위'로 구성하여 화면에 출력함. 
+ - adapterView의 한 종류
+ 
+ ㅇ 속성
+  1. android:divider : 아이템 간 구분을 위한 색상, 이미지 지정
+  2. android:dividerHeight : divider의 높이.
+  3. android:entries : 아이템에 지정될 데이터를 array리소스에서 가져옴
+  4. android: fastScrollEnabled : 빠르게 스크롤 할수 있는 thumb사용여부 (true/false)
